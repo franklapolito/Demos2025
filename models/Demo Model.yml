@@ -1,0 +1,8 @@
+unique_name: Demo Model
+object_type: model
+label: Demo Model
+dimensions:
+  - Sales_Order_Number
+metrics:
+  - unique_name: m_FACTINTERNETSALES_salesamount_sum
+relationships: []
