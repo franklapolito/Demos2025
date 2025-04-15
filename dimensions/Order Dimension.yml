@@ -1,0 +1,26 @@
+unique_name: Order Dimension
+object_type: dimension
+label: Order Dimension
+hierarchies:
+  - unique_name: Order Dimension
+    label: Order Dimension
+    levels:
+      - unique_name: Order Priority
+      - unique_name: Order Key
+level_attributes:
+  - unique_name: Order Key
+    label: Order Key
+    contains_unique_names: false
+    dataset: orders
+    is_unique_key: false
+    key_columns:
+      - o_orderkey
+    name_column: o_orderkey
+  - unique_name: Order Priority
+    label: Order Priority
+    contains_unique_names: false
+    dataset: orders
+    key_columns:
+      - o_orderpriority
+    name_column: o_orderpriority
+type: standard

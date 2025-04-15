@@ -1,0 +1,35 @@
+unique_name: customer_dimension
+object_type: dimension
+label: customer_dimension
+hierarchies:
+  - unique_name: Customer
+    label: Customer
+    levels:
+      - unique_name: Market Segment
+      - unique_name: Customer Name
+        secondary_attributes:
+          - unique_name: Customer Phone Number
+            label: Customer Phone Number
+            contains_unique_names: false
+            dataset: customer
+            is_unique_key: false
+            key_columns:
+              - c_phone
+            name_column: c_phone
+level_attributes:
+  - unique_name: Customer Name
+    label: Customer Name
+    contains_unique_names: false
+    dataset: customer
+    is_unique_key: true
+    key_columns:
+      - c_custkey
+    name_column: c_name
+  - unique_name: Market Segment
+    label: Market Segment
+    contains_unique_names: false
+    dataset: customer
+    key_columns:
+      - c_mktsegment
+    name_column: c_mktsegment
+type: standard

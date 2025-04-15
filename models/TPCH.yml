@@ -1,0 +1,30 @@
+unique_name: TPCH
+object_type: model
+label: TPCH
+metrics:
+  - unique_name: m_lineitem_l_quantity_avg
+relationships:
+  - unique_name: orders_o_custkey_to_customer_dimension_Customer Name
+    from:
+      dataset: orders
+      join_columns:
+        - o_custkey
+    to:
+      dimension: customer_dimension
+      level: Customer Name
+  - unique_name: orders_o_orderkey_to_Order Dimension_Order Key
+    from:
+      dataset: orders
+      join_columns:
+        - o_orderkey
+    to:
+      dimension: Order Dimension
+      level: Order Key
+  - unique_name: lineitem_l_orderkey_to_Order Dimension_Order Key
+    from:
+      dataset: lineitem
+      join_columns:
+        - l_orderkey
+    to:
+      dimension: Order Dimension
+      level: Order Key

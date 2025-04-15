@@ -1,0 +1,6 @@
+unique_name: m_lineitem_l_quantity_avg
+object_type: metric
+label: Average Quantity
+calculation_method: average
+column: l_quantity
+dataset: lineitem
